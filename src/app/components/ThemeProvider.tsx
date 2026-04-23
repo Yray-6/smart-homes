@@ -20,9 +20,9 @@ const ThemeContext = createContext<ThemeContextType | null>(null);
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [isDark, setIsDark] = useState(() => {
     if (typeof window === "undefined") {
-      return true;
+      return false;
     }
-    return window.localStorage.getItem("smart-homes-theme") !== "light";
+    return window.localStorage.getItem("smart-homes-theme") === "dark";
   });
 
   useEffect(() => {
