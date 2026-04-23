@@ -1,65 +1,96 @@
-import Image from "next/image";
+"use client";
+
+import Link from "next/link";
+import Navbar from "./components/Navbar";
+import WhatWeOffer from "./components/WhatWeOffer";
+import WhyChooseUs from "./components/WhyChooseUs";
+import ServicePackages from "./components/ServicePackages";
+import Footer from "./components/Footer";
+import FloatingChat from "./components/FloatingChat";
+import { useTheme } from "./components/ThemeProvider";
+import { FadeIn, Heartbeat } from "./components/motion";
 
 export default function Home() {
+  const { isDark } = useTheme();
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <>
+    <main className="relative min-h-screen overflow-hidden">
+      {/* Video background */}
+      <video
+        className="absolute inset-0 h-full w-full object-cover"
+        autoPlay
+        muted
+        loop
+        playsInline
+      >
+        <source src="/Hero%20section%20Mp4.mp4" type="video/mp4" />
+      </video>
+
+      {/* Dark overlay — matches Figma rgba(0,0,0,0.2) */}
+      <div className={`absolute inset-0 ${isDark ? "bg-black/20" : "bg-black/35"}`} />
+
+      <section className="relative z-10 mx-auto flex min-h-screen w-full max-w-[1393px] flex-col px-5 py-8 text-white sm:px-8 md:px-10 lg:px-12 lg:py-10">
+        {/* Navbar */}
+        <Navbar />
+
+        {/* Hero body — two columns on desktop, stacked on mobile */}
+        <div className="flex flex-1 flex-col items-center justify-center lg:flex-row lg:items-center lg:justify-between">
+
+          {/* Left — headline + CTA */}
+          <FadeIn className="flex max-w-[640px] flex-col justify-center lg:max-w-[767px]">
+            <h1 className="text-[2rem] font-bold leading-tight sm:text-5xl lg:text-[64px] lg:leading-[1.1]">
+              Designed For Living.
+              <br />
+              Powered By Intelligence
+            </h1>
+            <p className="mt-5 text-base font-normal leading-relaxed text-white/90 sm:mt-6 sm:text-lg lg:mt-7 lg:text-xl">
+              Turn your home into a seamless, responsive space where comfort,
+              security, and convenience adapt effortlessly to your lifestyle—so
+              every moment feels smarter, simpler, and more refined.
+            </p>
+            <Heartbeat className="mt-8 w-fit">
+              <Link
+                href="/#service-packages"
+                className="inline-flex w-fit items-center justify-center gap-3 rounded-[26px] bg-white px-8 py-3 text-base font-semibold text-[#13d1c3] shadow-[0_0_2px_rgba(0,0,0,0.25)] transition-colors hover:bg-[#e6fefd] active:scale-95"
+              >
+                Get Started
+              </Link>
+            </Heartbeat>
+          </FadeIn>
+
+          {/* Right — stats (desktop: vertical stack flush to right edge; mobile: 3-col grid at bottom) */}
+          <FadeIn
+            className="mt-10 grid grid-cols-3 gap-3 sm:gap-4 lg:mt-0 lg:flex lg:w-[320px] lg:-mr-12 lg:flex-col lg:gap-0 lg:space-y-[10px]"
+            delay={0.15}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            {[
+              { value: "10+", label: "Years of Service" },
+              { value: "100%", label: "Quality" },
+              { value: "500+", label: "Houses Transformed" },
+            ].map(({ value, label }) => (
+              <div
+                key={label}
+                className="flex flex-col justify-center rounded-l-[20px] bg-white/10 px-3 py-3 backdrop-blur-sm sm:px-5 lg:px-5 lg:py-3"
+              >
+                <p className="text-2xl font-normal leading-tight sm:text-3xl lg:text-4xl">
+                  {value}
+                </p>
+                <p className="mt-0.5 text-[11px] leading-snug text-white/80 sm:text-sm lg:text-base">
+                  {label}
+                </p>
+              </div>
+            ))}
+          </FadeIn>
         </div>
-      </main>
-    </div>
+      </section>
+    </main>
+
+    <WhatWeOffer isDark={isDark} />
+    <WhyChooseUs isDark={isDark} />
+    <ServicePackages isDark={isDark} />
+    <Footer isDark={isDark} />
+    <FloatingChat />
+    </>
   );
 }
