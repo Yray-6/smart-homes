@@ -77,7 +77,7 @@ export default function AboutPage() {
             <div className="absolute left-0 top-0 h-[503px] w-[429px] overflow-hidden rounded-[20px] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/about-img1-edcdbe.png"
+                src="/images/about-img1.jpg"
                 alt="Smart home installation"
                 className="h-full w-full object-cover"
               />
@@ -86,7 +86,7 @@ export default function AboutPage() {
             <div className="absolute left-[250px] top-[168px] h-[404px] w-[364px] overflow-hidden rounded-[20px] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/about-img2.png"
+                src="/images/about-img2.jpg"
                 alt="Smart home interior"
                 className="h-full w-full object-cover"
               />
@@ -98,7 +98,7 @@ export default function AboutPage() {
             <div className="aspect-429/503 w-full overflow-hidden rounded-[20px] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/about-img1-edcdbe.png"
+                src="/images/about-img1.jpg"
                 alt="Smart home installation"
                 className="h-full w-full object-cover"
               />
@@ -106,7 +106,7 @@ export default function AboutPage() {
             <div className="aspect-364/404 w-full overflow-hidden rounded-[20px] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/about-img2.png"
+                src="/images/about-img2.jpg"
                 alt="Smart home interior"
                 className="h-full w-full object-cover"
               />

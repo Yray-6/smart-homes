@@ -20,6 +20,7 @@ export default function WhyChooseUs({ isDark = false }: WhyChooseUsProps) {
               muted
               loop
               playsInline
+              preload="metadata"
             >
               <source src="/section2.mp4" type="video/mp4" />
             </video>

@@ -81,7 +81,7 @@ export default function WhatWeOffer({ isDark = false }: WhatWeOfferProps) {
               {/* Top-left */}
               <div className="relative overflow-hidden rounded-[20px]">
                 <Image
-                  src="/images/offer-top-right.png"
+                  src="/images/offer-top-right.jpg"
                   alt="Smart home top view"
                   fill
                   className="object-cover"
@@ -91,7 +91,7 @@ export default function WhatWeOffer({ isDark = false }: WhatWeOfferProps) {
               {/* Tall right — spans 2 rows */}
               <div className="relative row-span-2 overflow-hidden rounded-[20px]">
                 <Image
-                  src="/images/offer-tall.png"
+                  src="/images/offer-tall.jpg"
                   alt="Smart home tall view"
                   fill
                   className="object-cover"
@@ -101,7 +101,7 @@ export default function WhatWeOffer({ isDark = false }: WhatWeOfferProps) {
               {/* Middle-left */}
               <div className="relative overflow-hidden rounded-[20px]">
                 <Image
-                  src="/images/offer-mid-right.png"
+                  src="/images/offer-mid-right.jpg"
                   alt="Smart home mid view"
                   fill
                   className="object-cover"
@@ -111,7 +111,7 @@ export default function WhatWeOffer({ isDark = false }: WhatWeOfferProps) {
               {/* Bottom full-width — spans 2 cols */}
               <div className="relative col-span-2 overflow-hidden rounded-[20px]">
                 <Image
-                  src="/images/offer-bottom.png"
+                  src="/images/offer-bottom.jpg"
                   alt="Smart home bottom view"
                   fill
                   className="object-cover"

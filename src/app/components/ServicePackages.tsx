@@ -32,7 +32,7 @@ function buildWhatsAppUrl(pkg: {
 
 const packages = [
   {
-    image: "/images/pkg-essential.png",
+    image: "/images/pkg-essential.jpg",
     name: "Smart Essential Package",
     tagline: "Perfect entry into smart home automation for smaller spaces",
     price: "₦1,410,000",
@@ -46,7 +46,7 @@ const packages = [
     ],
   },
   {
-    image: "/images/pkg-tech.png",
+    image: "/images/pkg-tech.jpg",
     name: "Smart Tech Package",
     tagline:
       "Perfect entry for essential smarthome technologies that improves security, convenience and remote control",
@@ -66,7 +66,7 @@ const packages = [
     ],
   },
   {
-    image: "/images/pkg-lifestyle.png",
+    image: "/images/pkg-lifestyle.jpg",
     name: "Smart Lifestyle Package",
     tagline:
       "Focused on daily convenience, energy efficiency and modern lifestyle upgrade",
@@ -87,7 +87,7 @@ const packages = [
     ],
   },
   {
-    image: "/images/pkg-developer.png",
+    image: "/images/pkg-developer.jpg",
     name: "Developer's Package",
     tagline:
       "Specially discounted package tailored for developers building for sale. Provides comprehensive coverage for ante room, living room, dining room, kitchen, outdoor lighting, master bedroom and two additional bedrooms.",
@@ -95,7 +95,7 @@ const packages = [
     items: [],
   },
   {
-    image: "/images/pkg-silver.png",
+    image: "/images/pkg-silver.jpg",
     name: "Silver Package",
     tagline:
       "Smart coverage for your living area, ante-room, dining room, kitchen, compound, master bedroom, and two additional bedrooms. Includes lighting switches, AC switches, water heater switches, Google Mini speakers, Google Nest Hub, P2P cameras, smart door lock, and automated curtains.",
@@ -103,7 +103,7 @@ const packages = [
     items: [],
   },
   {
-    image: "/images/pkg-platinum.png",
+    image: "/images/pkg-platinum.jpg",
     name: "Platinum Package",
     tagline:
       "Elevated smart living covering living area, ante-room, dining room, kitchen, compound, master bedroom, upstairs living area, and four additional bedrooms. Includes smart lighting, AC & water heater controls, Google speakers, surveillance cameras, smart locks, automated curtains, in-ceiling audio, and much more.",

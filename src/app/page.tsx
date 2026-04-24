@@ -23,6 +23,7 @@ export default function Home() {
         muted
         loop
         playsInline
+        preload="metadata"
       >
         <source src="/Hero%20section%20Mp4.mp4" type="video/mp4" />
       </video>
