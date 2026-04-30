@@ -1,9 +1,10 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const TO_EMAIL = "Info@trustedhandsdigitalhomes.com";
+const TO_EMAIL = process.env.TO_EMAIL ?? "Info@trustedhandsdigitalhomes.com";
 const FROM_EMAIL =
-  process.env.CONTACT_FROM_EMAIL ?? "Trusted Hands <onboarding@resend.dev>";
+  process.env.CONTACT_FROM_EMAIL ??
+  "Trusted Hands <noreply@trustedhandsdigitalhomes.com>";
 
 type ContactPayload = {
   fullName: string;

@@ -8,9 +8,7 @@ type FooterProps = {
 export default function Footer(props: FooterProps) {
   void props;
   return (
-    <footer
-      className="mt-10 w-full rounded-b-[30px] border-t border-white/5 bg-[#050d18] pt-12 pb-20 text-white"
-    >
+    <footer className="mt-10 w-full rounded-b-[30px] border-t border-white/5 bg-[#050d18] pt-12 pb-20 text-white">
       <div className="mx-auto grid w-full max-w-[1328px] gap-10 px-5 pb-12 sm:px-8 md:grid-cols-2 lg:grid-cols-[1.3fr_0.7fr_0.7fr] lg:px-0">
         <FadeIn className="md:col-span-2 lg:col-span-1">
           <Link href="/" className="inline-flex" aria-label="Go to home">
@@ -36,7 +34,10 @@ export default function Footer(props: FooterProps) {
               </Link>
             </li>
             <li>
-              <Link href="/about" className="transition-colors hover:text-[#13d1c3]">
+              <Link
+                href="/about"
+                className="transition-colors hover:text-[#13d1c3]"
+              >
                 About Us
               </Link>
             </li>
@@ -49,7 +50,10 @@ export default function Footer(props: FooterProps) {
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="transition-colors hover:text-[#13d1c3]">
+              <Link
+                href="/contact"
+                className="transition-colors hover:text-[#13d1c3]"
+              >
                 Contact Us
               </Link>
             </li>
@@ -58,9 +62,7 @@ export default function Footer(props: FooterProps) {
 
         <FadeIn className="space-y-6 sm:space-y-8" delay={0.14}>
           <div className="flex items-center gap-4">
-            <span
-              className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-white/10"
-            >
+            <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-white/10">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/images/icon-email.svg" alt="" className="h-5 w-5" />
             </span>
@@ -73,36 +75,24 @@ export default function Footer(props: FooterProps) {
           </div>
 
           <div className="flex items-center gap-4">
-            <span
-              className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-white/10"
-            >
+            <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-white/10">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/images/icon-phone.svg" alt="" className="h-5 w-5" />
             </span>
             <div>
               <h4 className="font-bold">Call Us</h4>
-              <p className="text-[#99a1af]">
-                08088535357
-              </p>
+              <p className="text-[#99a1af]">08088535357</p>
             </div>
           </div>
 
           <div className="flex items-center gap-4">
-            <span
-              className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-white/10"
-            >
+            <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-white/10">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/icon-location.svg"
-                alt=""
-                className="h-5 w-5"
-              />
+              <img src="/images/icon-location.svg" alt="" className="h-5 w-5" />
             </span>
             <div>
               <h4 className="font-bold">Location</h4>
-              <p className="text-[#99a1af]">
-                Lagos, Nigeria.
-              </p>
+              <p className="text-[#99a1af]">Abuja, Nigeria.</p>
             </div>
           </div>
         </FadeIn>
